@@ -1,0 +1,8 @@
+.movie {
+    background: rgb(247, 241, 241);
+    text-align: center;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: rgb(184, 205, 92) 1px solid;
+}
