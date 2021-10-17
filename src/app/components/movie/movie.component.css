@@ -1,8 +1,10 @@
 .movie {
     background: rgb(247, 241, 241);
+    border-radius: 5px;
     text-align: center;
-    margin: 5px;
-    padding: 10px 20px;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px 10px;
     cursor: pointer;
-    border: rgb(184, 205, 92) 1px solid;
+    border: #0275d8 1px solid;
 }
