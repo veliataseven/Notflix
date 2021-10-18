@@ -1,0 +1,9 @@
+.watchMovie {
+    background: rgb(247, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: #0275d8 1px solid;
+}
