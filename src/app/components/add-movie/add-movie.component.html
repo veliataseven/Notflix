@@ -1,0 +1,89 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add A New Movie</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Movie Id:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Enter a youtube video id"
+            [(ngModel)]="id"
+          />
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label"
+              >Movie Title:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput2"
+              placeholder="Enter a movie title"
+              [(ngModel)]="title"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label"
+              >Movie Genre:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput3"
+              placeholder="Enter a movie genre"
+              [(ngModel)]="genre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label"
+              >Movie Rate:</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="exampleFormControlInput4"
+              placeholder="Enter movie rate"
+              [(ngModel)]="rate"
+            />
+          </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea5" class="form-label"
+            >Description:</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea5"
+            rows="3"
+            [(ngModel)]="description"
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="saveMovie()">Save Movie</button>
+      </div>
+    </div>
+  </div>
+</div>

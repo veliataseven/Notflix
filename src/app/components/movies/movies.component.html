@@ -1,6 +1,19 @@
 <div class="movies">
-  <app-select-genre></app-select-genre> 
-  <app-button routerLink = "addmovie" color = "success" text = "Add A New Movie"></app-button>
+  <app-select-genre></app-select-genre>
+  <!-- <app-button routerLink = "addmovie" color = "success" text = "Add A New Movie"></app-button> -->
+  <!-- Button trigger modal -->
+  <div class="d-flex justify-content-center">
+  <button
+  
+    type="button"
+    class="btn btn-success"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    Add A New Movie
+  </button>
+</div>
+  <app-add-movie></app-add-movie>
   <app-movie
     *ngFor="let currentMovie of movies"
     [movie]="currentMovie"

@@ -12,6 +12,8 @@ import { SelectGenreComponent } from './components/select-genre/select-genre.com
 import { WatchMovieComponent } from './components/watch-movie/watch-movie.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { RouterModule, Routes } from '@angular/router';
+import { AddMovieComponent } from './components/add-movie/add-movie.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: MoviesComponent },
@@ -28,12 +30,14 @@ const appRoutes: Routes = [
     SearchComponent,
     SelectGenreComponent,
     WatchMovieComponent,
-    SafePipe
+    SafePipe,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
