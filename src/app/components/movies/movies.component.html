@@ -1,4 +1,6 @@
 <div class="movies">
+  <app-select-genre></app-select-genre> 
+  <app-button routerLink = "addmovie" color = "success" text = "Add A New Movie"></app-button>
   <app-movie
     *ngFor="let currentMovie of movies"
     [movie]="currentMovie"

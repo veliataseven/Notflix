@@ -11,6 +11,13 @@ import { SearchComponent } from './components/search/search.component';
 import { SelectGenreComponent } from './components/select-genre/select-genre.component';
 import { WatchMovieComponent } from './components/watch-movie/watch-movie.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: MoviesComponent },
+  { path: 'watchmovie/:id', component: WatchMovieComponent }
+  // { path: 'watchmovie', component: WatchMovieComponent },
+];
 
 @NgModule({
   declarations: [
@@ -25,7 +32,8 @@ import { SafePipe } from './pipes/safe.pipe';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

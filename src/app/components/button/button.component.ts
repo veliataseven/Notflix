@@ -11,6 +11,8 @@ export class ButtonComponent implements OnInit {
 
   @Input() color!: String;
 
+  @Input() class!: String;
+
   constructor() { }
 
   ngOnInit(): void {
