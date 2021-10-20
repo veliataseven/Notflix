@@ -14,10 +14,10 @@ export class WatchMovieComponent implements OnInit {
   url: any = "https://www.youtube.com/embed/" + this.pathVariable;
 
   constructor(private movieService: MovieService, private route: ActivatedRoute) {
-    // this.route.params.subscribe( params => {
-    //   this.pathVariable = this.route.snapshot.paramMap.get('id');
-    //   console.log(this.pathVariable);
-    //  } );
+    this.route.params.subscribe( params => {
+      this.pathVariable = this.route.snapshot.paramMap.get('id');
+      console.log(this.pathVariable);
+     } );
 }
 
   ngOnInit(): void {

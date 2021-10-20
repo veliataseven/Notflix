@@ -1,5 +1,7 @@
-<div [routerLink] = "['watchmovie', movie.id]" class="movie">
-    <h5>{{movie.title}}</h5>
-    <p>Genre : {{movie.genre}}</p>
-    <!-- <app-button [routerLink] = "['watchmovie', movie.id]" color = "danger" text = "Watch :)"></app-button> -->
-</div>
+<div [routerLink] = "['watchmovie', movie.id]" class="card me-5 p-3 mb-4 shadow" style="width: 18rem;  cursor: pointer;" >
+    <img width="150px" height="240px" src={{movie.imageUrl}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text">Genre : {{movie.genre}}</p>
+    </div>
+  </div>

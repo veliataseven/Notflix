@@ -1,17 +1,32 @@
-<div class="watchMovie embed-responsive embed-responsive-16by9">
+<div
+  class="card shadow p-5 m-auto embed-responsive embed-responsive-16by9"
+  style="width: 41rem"
+>
   <iframe
     width="560"
     height="315"
     class="embed-responsive-item"
-    [src]='"https://www.youtube.com/embed/" + movieToBeWatched.id | safe'
+    [src]="'https://www.youtube.com/embed/' + movieToBeWatched.id | safe"
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
   ></iframe>
-  <p>Title : {{ movieToBeWatched.title }}</p>
-  <p>Genre : {{ movieToBeWatched.genre }}</p>
-  <p>Rate : {{ movieToBeWatched.rate }}</p>
-  <p>Description : {{ movieToBeWatched.description }}</p>
-  <app-button routerLink="/" color = "primary" text = "Go Back Movies"></app-button>
+  <div class="card-body">
+    <h5 class="card-title">{{ movieToBeWatched.title }}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Genre : {{ movieToBeWatched.genre }}</li>
+    <li class="list-group-item">Rate : {{ movieToBeWatched.rate }}</li>
+    <li class="list-group-item">
+      Description : {{ movieToBeWatched.description }}
+    </li>
+  </ul>
+  <div class="card-body">
+    <app-button
+      routerLink="/"
+      color="primary"
+      text="Go Back Movies"
+    ></app-button>
+  </div>
 </div>

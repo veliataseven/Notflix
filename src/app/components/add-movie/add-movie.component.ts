@@ -8,12 +8,13 @@ import { Movie } from 'src/Movie';
   styleUrls: ['./add-movie.component.css'],
 })
 export class AddMovieComponent implements OnInit {
-  
+
   id!: string;
   title!: string;
   genre!: string;
   rate!: number;
   description!: string;
+  imageUrl!: string;
 
   movie!: Movie;
 
@@ -28,7 +29,8 @@ export class AddMovieComponent implements OnInit {
       title: this.title,
       genre: this.genre,
       rate: this.rate,
-      description: this.description
+      description: this.description,
+      imageUrl: this.imageUrl
     }
 
     this.movieService.postMovie(this.movie).subscribe((data) => {
