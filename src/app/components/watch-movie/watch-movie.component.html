@@ -16,10 +16,17 @@
     <h5 class="card-title">{{ movieToBeWatched.title }}</h5>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Genre : {{ movieToBeWatched.genre }}</li>
-    <li class="list-group-item">Rate : {{ movieToBeWatched.rate }}</li>
     <li class="list-group-item">
-      Description : {{ movieToBeWatched.description }}
+      <strong>Genre</strong> : {{ movieToBeWatched.genre }}
+    </li>
+    <li class="list-group-item">
+      <strong>Rating</strong> : {{ movieToBeWatched.rate }}
+    </li>
+    <li class="list-group-item">
+      <strong>Description</strong> : {{ movieToBeWatched.description }}
+    </li>
+    <li class="list-group-item">
+      <app-rating></app-rating>
     </li>
   </ul>
   <div class="card-body">

@@ -1,0 +1,13 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+i {
+    cursor: pointer;
+}
+
+.rating-color {
+    color: #fbc634 !important;
+}
+
+.rating-size {
+    font-size: 24px;
+}

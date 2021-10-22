@@ -1,7 +1,18 @@
-<div [routerLink] = "['watchmovie', movie.id]" class="card me-5 p-3 mb-4 shadow" style="width: 18rem;  cursor: pointer;" >
-    <img width="150px" height="240px" src={{movie.imageUrl}} class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{movie.title}}</h5>
-      <p class="card-text">Genre : {{movie.genre}}</p>
-    </div>
+<div
+  [routerLink]="['watchmovie', movie.id]"
+  class="card me-5 p-3 pb-1 mb-4 shadow"
+  style="width: 18rem; cursor: pointer"
+>
+  <img
+    width="150px"
+    height="240px"
+    src="{{ movie.imageUrl }}"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <p class="card-text">Genre : {{ movie.genre }}</p>
+    <p class="card-text">Rating : {{ movie.rate }}</p>
   </div>
+</div>
