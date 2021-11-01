@@ -4,23 +4,24 @@ import { LoginService } from 'src/app/services/login.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  isLogedIn: boolean = false;
 
-  isLogedIn!:boolean;
-
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService) {}
 
   logout() {
     this.isLogedIn = !this.isLogedIn;
-    this.loginService.setLogedIn(false);
+    localStorage.setItem('isLogedIn', 'false');
+    this.loginService.setLogedIn();
   }
 
   ngOnInit(): void {
-    this.loginService.getLogedIn().subscribe(data => this.isLogedIn = data); 
-    console.log('this.isLogedIn In Navbar :>> ', this.isLogedIn);
-    console.log('this.loginService.getLogedIn() in Navbar :>> ', this.loginService.getLogedIn());
-  }
+    this.isLogedIn = this.loginService.getLogedInLocalStorage();
 
+    this.loginService.getLogedIn().subscribe((data) => {
+      this.isLogedIn = data;
+    });
+  }
 }

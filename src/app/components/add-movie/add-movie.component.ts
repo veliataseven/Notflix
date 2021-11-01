@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/Movie';
 
@@ -18,7 +19,7 @@ export class AddMovieComponent{
 
   movie!: Movie;
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService, private router: Router) {}
 
   saveMovie() {
 
@@ -34,5 +35,11 @@ export class AddMovieComponent{
     this.movieService.postMovie(this.movie).subscribe((data) => {
       console.log('data :>> ', data);
     });
+
+    this.router.navigate(['/'])
+    .then(() => {
+      window.location.reload();
+    });
+
   }
 }

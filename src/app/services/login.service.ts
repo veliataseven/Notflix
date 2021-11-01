@@ -6,22 +6,29 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class LoginService {
 
-  private subject = new BehaviorSubject<boolean>(false);
+  private subject = new Subject<boolean>();
 
-  isLogedIn: boolean = false;
+  isLogedIn!: boolean;
 
   constructor() { }
 
-  setLogedIn(isLogedIn:boolean) {
-    this.isLogedIn = isLogedIn;
-    console.log('this.isLogedIn in Services:>> ', this.isLogedIn);
-    this.subject.next(isLogedIn);
+  setLogedIn() {
+
+    this.isLogedIn = this.getLogedInLocalStorage();
+
+    this.subject.next(this.isLogedIn);
   }
 
   getLogedIn(): Observable<boolean> {
     return this.subject.asObservable();
   }
 
-  
+  getLogedInLocalStorage() {
+    if (localStorage.getItem("isLogedIn") === null || localStorage.getItem("isLogedIn") === "false") {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
 }

@@ -15,7 +15,8 @@ export class LoginComponent {
 
   login() {
     if(this.password === "veli123" && this.email === "veli@gmail.com") {
-      this.loginService.setLogedIn(true);
+      localStorage.setItem('isLogedIn', "true");
+      this.loginService.setLogedIn();
     }
   }
 
