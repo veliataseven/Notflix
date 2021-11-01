@@ -1,11 +1,40 @@
 <div class="d-flex justify-content-between align-items-center">
-  <!-- <div class="ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div> -->
   <div class="ratings">
     <strong>Rate the movie</strong> :
-    <i class="bi bi-star rating-color rating-size"></i>
-    <i class="bi bi-star rating-color rating-size"></i>
-    <i class="bi bi-star rating-color rating-size"></i>
-    <i class="bi bi-star rating-color rating-size"></i>
-    <i class="bi bi-star rating-size"></i>
+    <i
+      #rateOne
+      id="rateOne"
+      class="bi bi-star rating-size"
+      [class.rating-color]="isRatedOne"
+      (click)="changeRating(rateOne.id)"
+    ></i>
+    <i
+      #rateTwo
+      id="rateTwo"
+      class="bi bi-star rating-size"
+      [class.rating-color]="isRatedTwo"
+      (click)="changeRating(rateTwo.id)"
+    ></i>
+    <i
+      #rateThree
+      id="rateThree"
+      class="bi bi-star rating-size"
+      [class.rating-color]="isRatedThree"
+      (click)="changeRating(rateThree.id)"
+    ></i>
+    <i
+      #rateFour
+      id="rateFour"
+      class="bi bi-star rating-size"
+      [class.rating-color]="isRatedFour"
+      (click)="changeRating(rateFour.id)"
+    ></i>
+    <i
+      #rateFive
+      id="rateFive"
+      class="bi bi-star rating-size"
+      [class.rating-color]="isRatedFive"
+      (click)="changeRating(rateFive.id)"
+    ></i>
   </div>
 </div>

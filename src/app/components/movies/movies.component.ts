@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Movie } from 'src/Movie';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -7,18 +7,12 @@ import { MoviesService } from 'src/app/services/movies.service';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent implements OnInit, OnChanges {
+export class MoviesComponent implements OnInit {
 
   movies!: Movie[];
   selectedGenre!: string;
 
   constructor (private moviesService: MoviesService) {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes.movies) {
-
-    }
-  }
 
   getFilteredMovies($event: any) {
     this.selectedGenre = $event;

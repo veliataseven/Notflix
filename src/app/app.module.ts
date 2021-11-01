@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from './components/rating/rating.component';
+import { PostComponent } from './components/post/post.component';
 
 const appRoutes: Routes = [
   { path: '', component: MoviesComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     WatchMovieComponent,
     SafePipe,
     AddMovieComponent,
-    RatingComponent
+    RatingComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

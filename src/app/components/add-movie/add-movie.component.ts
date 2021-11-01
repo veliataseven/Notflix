@@ -7,7 +7,7 @@ import { Movie } from 'src/Movie';
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.css'],
 })
-export class AddMovieComponent implements OnInit {
+export class AddMovieComponent{
 
   id!: string;
   title!: string;
@@ -19,8 +19,6 @@ export class AddMovieComponent implements OnInit {
   movie!: Movie;
 
   constructor(private movieService: MovieService) {}
-
-  ngOnInit(): void {}
 
   saveMovie() {
 

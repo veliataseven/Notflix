@@ -6,14 +6,11 @@ import { Movie } from 'src/Movie';
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
-export class MovieComponent implements OnInit {
+export class MovieComponent {
 
   @Input()
   movie!: Movie;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
