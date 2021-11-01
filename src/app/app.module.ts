@@ -16,11 +16,13 @@ import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from './components/rating/rating.component';
 import { PostComponent } from './components/post/post.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
   { path: '', component: MoviesComponent },
-  { path: 'watchmovie/:id', component: WatchMovieComponent }
-  // { path: 'watchmovie', component: WatchMovieComponent },
+  { path: 'watchmovie/:id', component: WatchMovieComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
@@ -35,7 +37,9 @@ const appRoutes: Routes = [
     SafePipe,
     AddMovieComponent,
     RatingComponent,
-    PostComponent
+    PostComponent,
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
