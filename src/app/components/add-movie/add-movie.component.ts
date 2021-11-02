@@ -8,8 +8,7 @@ import { Movie } from 'src/Movie';
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.css'],
 })
-export class AddMovieComponent{
-
+export class AddMovieComponent {
   id!: string;
   title!: string;
   genre!: string;
@@ -24,22 +23,20 @@ export class AddMovieComponent{
   saveMovie() {
 
     this.movie = {
-      id:  this.id,
+      id: this.id,
       title: this.title,
       genre: this.genre,
       rate: this.rate,
       description: this.description,
-      imageUrl: this.imageUrl
-    }
+      imageUrl: this.imageUrl,
+    };
 
     this.movieService.postMovie(this.movie).subscribe((data) => {
       console.log('data :>> ', data);
     });
 
-    this.router.navigate(['/'])
-    .then(() => {
+    this.router.navigate(['/']).then(() => {
       window.location.reload();
     });
-
   }
 }
